@@ -31,17 +31,19 @@ public class Main {
 
         System.out.println("Задание 3");
 
-        System.out.println("Средняя сумма трат за месяц составила " + (double) maxCost / costPerMonth.length + " рублей");
+        System.out.println("Средняя сумма трат за месяц составила " + (double) sumCost / costPerMonth.length + " рублей");
 
         System.out.println("Задание 4");
 
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        char[] reverseReverse = new char[reverseFullName.length];
 
-        for (int i = 0; i < reverseFullName.length; i++) {
-            reverseReverse[i] = reverseFullName[reverseFullName.length - 1 -i];
-            System.out.print(reverseReverse[i]);
+        for (int i = 0; i < reverseFullName.length / 2; i++) {
+            char j = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length - i - 1];
+            reverseFullName[reverseFullName.length - i - 1] = j;
+
         }
+           System.out.println(reverseFullName);
 
     }
 }
